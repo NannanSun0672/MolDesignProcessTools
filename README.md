@@ -10,3 +10,14 @@ aa_codes = {
      'PRO':'P', 'GLN':'Q', 'ARG':'R', 'SER':'S',
      'THR':'T', 'VAL':'V', 'TYR':'Y', 'TRP':'W'}
 
+seq = ''
+for line in open(""):
+    if line[0:6] == "SEQRES":
+        columns = line.split()
+        for resname in columns[4:]:
+            seq = seq + aa_codes[resname]
+i = 0
+print (">1TLD")
+while i < len(seq):
+    print (seq[i:i + 64])
+    i = i + 64
